@@ -1,0 +1,38 @@
+/* Cookies */
+ 
+.cookies-wrapper {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  .cookie-consent { display: none; }
+  #cookies {
+    padding: 10px 25px;
+    background-color: rgba(255,255,255,.95);
+    border-top: 1px solid #c4c6c8;
+  }
+  .cookies-text {
+    font-size: 17px;
+    letter-spacing: 0.025em;
+  }
+  a {
+    white-space: nowrap;
+    text-decoration: underline;
+  }
+}
+#cookies-close {
+  font-size: 12px;
+  height: 12px;
+  margin-left: 16px;
+  vertical-align: text-bottom;
+  //@extend .icon;
+  //@extend .icon-close;
+  &:before { color: #000!important; }
+  &:hover:before,
+  &:active:before {
+    color: #000!important;
+  }
+}
