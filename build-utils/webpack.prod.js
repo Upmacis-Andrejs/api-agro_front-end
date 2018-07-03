@@ -2,7 +2,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
-module.exports = {
+config = {
 	mode: 'production',
 	plugins: [
 		new OptimizeCSSAssetsPlugin({}),

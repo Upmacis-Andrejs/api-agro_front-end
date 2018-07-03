@@ -45,27 +45,6 @@ img,
   overflow: hidden;
   text-overflow: ellipsis;  
 }
-@mixin line-clamp {
-  display: -webkit-box!important;
-  -webkit-box-orient: vertical;
-  overflow: hidden;  
-}
-.line-clamp-2 {
-	@include line-clamp;
-	-webkit-line-clamp: 2;
-}
-.line-clamp-3 {
-	@include line-clamp;
-	-webkit-line-clamp: 3; 
-}
-.line-clamp-4 {
-	@include line-clamp;
-	-webkit-line-clamp: 4;
-}
-.line-clamp-5 {
-	@include line-clamp;
-	-webkit-line-clamp: 5;
-}
 .nowrap { white-space: nowrap; }
 .wrap { white-space: initial!important; }
 .overflow-hidden { overflow: hidden; }

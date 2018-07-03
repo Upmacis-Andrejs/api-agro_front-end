@@ -1,7 +1,9 @@
 const webpack = require("webpack");
 const path = require("path");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
@@ -23,10 +25,19 @@ const config = {
     new CleanWebpackPlugin(
     	['assets'],
     	{
-			root:     path.resolve(__dirname, "../"),
-			verbose:  true
-		}
-	),
+  			root:     path.resolve(__dirname, "../"),
+  			verbose:  true
+  		}
+  	),
+	new CopyWebpackPlugin(
+    	[
+    		{
+    			from: 'resources/vendor/modernizr-3.5.0.min.js',
+    			to: 'js/'
+    		}
+    	],
+    	{ debug: 'debug' }
+    ),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'resources/index.html'
@@ -41,7 +52,23 @@ const config = {
     }),
     new MiniCssExtractPlugin({
       filename: "./css/style.css"
-    }) 
+    }),
+    new FaviconsWebpackPlugin({
+    	logo: './resources/img/favicon.png',
+    	prefix: 'images/',
+    	icons: {
+	      android: false,
+	      appleIcon: false,
+	      appleStartup: false,
+	      coast: false,
+	      favicons: true,
+	      firefox: false,
+	      opengraph: false,
+	      twitter: false,
+	      yandex: false,
+	      windows: false
+	    }
+    })
   ],
   module: {
   	rules: [
@@ -87,7 +114,7 @@ const config = {
           			require('autoprefixer')({
 			            browsers: [
 				            '> 1%',
-				            'last 4 versions',
+				            'last 2 versions',
 				            'IE 10',
 				            'IE 11'
 			            ],
