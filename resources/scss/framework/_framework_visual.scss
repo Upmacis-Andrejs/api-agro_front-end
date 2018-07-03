@@ -72,11 +72,11 @@ img,
 .nbsp-after:after { content: "\00a0"; }
 
   // Inline positioning
-.inline-vert-c { vertical-align: middle; }
-.inline-vert-b { vertical-align: bottom; }
-.inline-vert-t { vertical-align: top; }
-.inline-hor-c { text-align: center; }
-.inline-hor-r { text-align: right; }
+.inline-y-c { vertical-align: middle; }
+.inline-y-b { vertical-align: bottom; }
+.inline-y-t { vertical-align: top; }
+.inline-x-c { text-align: center; }
+.inline-x-r { text-align: right; }
 
   // Cursor
 .select:hover,

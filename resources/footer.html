@@ -1,16 +1,21 @@
             
             <!-- site footer -->
-            <footer class="site-footer">
+            <footer class="site-footer flex-y-c">
+                <div class="container">
+                    <div class="row m-x-0">
+                        <h1 class="h1 c-on-dark">This is Footer</h1>
+                    </div>
+                </div>
             </footer>
             <!-- /site footer -->
 
             <!-- cookies -->
             <div class="cookies-wrapper">
-                <div class="js-cookie-consent cookie-consent z-999" class="cookies">
-                    <div class="flex-hor-c" class="cookies-cont">
-                        <div class="flex-vert-c">
+                <div class="js-cookie-consent cookie-consent" id="cookies">
+                    <div class="flex-x-c">
+                        <div class="cookies-cont flex-y-c">
                           <p class="cookies-text inline-block">This website uses cookies to enhance user experience. By continuing using this site, you agree to cookie usage.</p>
-                          <a class="` js-cookie-consent-agree cookie-consent__agree text-decor-none" class="cookies-close" href="#"></a>
+                          <a class="js-cookie-consent-agree cookie-consent__agree text-decor-none js-cookies-close icon-close"></a>
                         </div>
                     </div>
                 </div>
@@ -22,4 +27,9 @@
 
         <!-- Place for your manually added scripts, for example google maps -->
     </body>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </html>

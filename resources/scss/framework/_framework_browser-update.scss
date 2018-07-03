@@ -1,6 +1,6 @@
 /* Deprecated browser notification style */
 
-#update_browser_fake_body {
+.update_browser_fake_body {
     position: fixed;
     display: table;
     width: 100vw;
@@ -9,7 +9,7 @@
     overflow-y: auto;
     z-index: 9999999;                            
 }
-#update_browser_container {
+.update_browser_container {
     display: table-cell;
     vertical-align: middle;
     width: 100vw;
@@ -20,7 +20,7 @@
     color: #808080;
     font-size: 16px;
 }
-#update_browser {
+.update_browser {
     width: 1063px;
     max-width: 90%;
     padding: 38px 30px 47px 30px;
@@ -28,24 +28,24 @@
     margin-left: auto;
     background-color: #fff;
 }
-#update_browser_inner {
+.update_browser_inner {
     max-width: 855px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
 }
-#update_browser_inner h1 {
+.update_browser_inner h1 {
     font-size: 31px;
     letter-spacing: 0.01em;
     margin-bottom: 16px;
 }
-#update_browser_inner p {
+.update_browser_inner p {
     font-size: 16px;
     letter-spacing: 0.01em;
     line-height: 28px;
     margin-bottom: 8px;
 }            
-#browser_icon_wrap {
+.browser_icon_wrap {
     margin-right: -30px;
     margin-left: -30px;
     margin-top: 35px;
@@ -75,20 +75,20 @@
     font-size: 16px;
     color: #808080;
 }
-#firefox .browser_icon { background-image: url('../img/firefox.png'); }
-#chrome .browser_icon {
+.firefox .browser_icon { background-image: url('../img/firefox.png'); }
+.chrome .browser_icon {
     background-image: url('../img/chrome.png');
     background-size: 110px 110px;
 }
-#opera .browser_icon { background-image: url('../img/opera.png'); }
-#safari .browser_icon { background-image: url('../img/safari.png'); }
-#edge .browser_icon {
+.opera .browser_icon { background-image: url('../img/opera.png'); }
+.safari .browser_icon { background-image: url('../img/safari.png'); }
+.edge .browser_icon {
     background-image: url('../img/edge.png');
     background-size: 85px 85px;
     left: -8px;
     bottom: -4px;
 }
-#close_announcement {
+.close_announcement {
     display: inline-block;
     min-width: 180px;
     height: 43px;
@@ -98,15 +98,15 @@
     color: #fff;
     background-color: #333;
 }
-#close_announcement,
-#close_announcement:hover,
-#close_announcement:active,
-#close_announcement:focus {
+.close_announcement,
+.close_announcement:hover,
+.close_announcement:active,
+.close_announcement:focus {
   text-decoration: none;
   color: #fff!important;
 }
 @media (max-width: 767px) {
-    #browser-icon-wrap {
+    .browser-icon-wrap {
         margin-right: -15px;
         margin-left: -15px;
     }
@@ -117,5 +117,5 @@
     }                
 }
 @media (max-width: 480px) {
-    #update_browser { max-width: 100%; }                
+    .update_browser { max-width: 100%; }                
 }

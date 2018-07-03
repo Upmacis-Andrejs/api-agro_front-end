@@ -1,3 +1,25 @@
 /* Site content */
 
-body { background: linear-gradient(green, ease, blue); }
+// General
+.site-content { 
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+.btn-1 {
+  min-width: 223px;
+  padding: 10px;
+  color: $c_white;
+  background-color: $c_additional;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  @extend .h5;
+}
+
+.btn-1:focus,
+.btn-1:hover,
+.btn-1:active {
+  color: #fff;
+  background-color: $c_accent;
+}

@@ -13,21 +13,21 @@
   align-items: flex-start;
   flex-direction: column;    
 }
-.flex-vert-c {
+.flex-y-c {
   display: flex;
   align-items: center;
 }
-.flex-vert-b {
+.flex-y-b {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;   
 }
-.flex-hor-r {
+.flex-x-r {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
 }
-.flex-hor-c {
+.flex-x-c {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -52,27 +52,27 @@
   left: 50%;
   transform: translate(-50%,-50%);   
 }
-.block-vert-c {
+.block-y-c {
   position: absolute;
   display: block;
   top: 50%;
   bottom: auto;
   transform: translateY(-50%);   
 }
-.block-vert-b {
+.block-y-b {
   position: absolute;
   display: block;
   top: auto;
   bottom: 0;
 }
-.block-hor-c {
+.block-x-c {
   position: absolute;
   display: block;
   right: auto;
   left: 50%;
   transform: translateX(-50%);   
 }
-.block-hor-right {
+.block-x-right {
   position: absolute;
   display: block;
   right: 0;
@@ -191,3 +191,27 @@
 }
 .clearfix:after { clear: both; }
 .clearfix { *zoom:1; }
+
+// Remove max-width and min-width
+.max-w-none { max-width: none !important; }
+.min-w-0 { min-width: 0 !important; }
+@media(min-width: map-get($breakpoints, xl)) {
+  .max-w-none-xl { max-width: none !important; }
+  .min-w-0-xl { min-width: 0 !important; }
+}
+@media(min-width: map-get($breakpoints, lg)) and (max-width: map-get($breakpoints, xl) - 1) {
+  .max-w-none-lg { max-width: none !important; }
+  .min-w-0-lg { min-width: 0 !important; }
+}
+@media(min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg) - 1) {
+  .max-w-none-md { max-width: none !important; }
+  .min-w-0-md { min-width: 0 !important; }
+}
+@media(min-width: map-get($breakpoints, sm)) and (max-width: map-get($breakpoints, md) - 1) {
+  .max-w-none-sm { max-width: none !important; }
+  .min-w-0-sm { min-width: 0 !important; }
+}
+@media(max-width: map-get($breakpoints, sm) - 1) {
+  .max-w-none-xs { max-width: none !important; }
+  .min-w-0-xs { min-width: 0 !important; }
+}

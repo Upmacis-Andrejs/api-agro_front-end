@@ -71,7 +71,7 @@ $c_transparent: transparent;
 .bg-transparent { background-color: $c_transparent; }
 
 	// Others ( add all values that you think should be variables )
-$box_shadow: 2px 2px 6px 0px rgba(0,0,0,0.5);
+$box_shadow: 0px 2px 6px 0px rgba(0,0,0,.6);
 
 // Import Styles ( comment out any partial of framework that does not fit your needs )
 	// Framework

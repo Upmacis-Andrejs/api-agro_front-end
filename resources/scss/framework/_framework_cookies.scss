@@ -11,7 +11,7 @@
   .cookie-consent { display: none; }
   #cookies {
     padding: 10px 25px;
-    background-color: rgba(255,255,255,.95);
+    background-color: rgba($c_white,.85);
     border-top: 1px solid #c4c6c8;
   }
   .cookies-text {
@@ -23,16 +23,14 @@
     text-decoration: underline;
   }
 }
-#cookies-close {
+.icon-close {
   font-size: 12px;
   height: 12px;
   margin-left: 16px;
   vertical-align: text-bottom;
-  //@extend .icon;
-  //@extend .icon-close;
-  &:before { color: #000!important; }
+  &:before { color: $c_black!important; }
   &:hover:before,
   &:active:before {
-    color: #000!important;
+    color:  $c_black!important;
   }
 }

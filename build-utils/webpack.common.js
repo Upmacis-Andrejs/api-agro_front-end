@@ -32,6 +32,10 @@ const config = {
       template: 'resources/index.html'
     }),
     new HtmlWebpackPlugin({
+      filename: '404.html',
+      template: 'resources/404.html'
+    }),
+    new HtmlWebpackPlugin({
       filename: 'page-example.html',
       template: 'resources/page-example.html'
     }),
@@ -83,7 +87,7 @@ const config = {
           			require('autoprefixer')({
 			            browsers: [
 				            '> 1%',
-				            'last 2 versions',
+				            'last 4 versions',
 				            'IE 10',
 				            'IE 11'
 			            ],
