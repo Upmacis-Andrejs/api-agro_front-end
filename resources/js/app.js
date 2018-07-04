@@ -75,11 +75,11 @@ $(document).ready(function() {
   });
 
   // Replace all .svg to .png, in case the browser does not support the format
-  /*if(!Modernizr.svg) {
+  if(!Modernizr.svg) {
       $('img[src*="svg"]').attr('src', function() {
           return $(this).attr('src').replace('.svg', '.png');
       });
-  }*/
+  }
 
   // Script for full-width row
   function row_full_w () {
