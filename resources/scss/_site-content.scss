@@ -2,24 +2,22 @@
 
 // General
 .site-content { 
-	padding-top: 100px;
-	padding-bottom: 50px;
 }
 
 .btn-1 {
-  min-width: 223px;
+  min-width: 190px;
   padding: 10px;
   color: $c_white;
-  background-color: $c_additional;
+  background-color: $c_default;
   overflow: hidden;
   text-decoration: none;
   text-transform: uppercase;
-  @extend .h5;
+  @extend .p;
 }
 
 .btn-1:focus,
 .btn-1:hover,
 .btn-1:active {
   color: #fff;
-  background-color: $c_accent;
+  background-color: $c_accent_2;
 }

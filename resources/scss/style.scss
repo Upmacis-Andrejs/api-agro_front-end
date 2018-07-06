@@ -4,11 +4,11 @@
 	// Variables
 		// Grid
 			// Site width ( max width of site content )
-			$site_width: 1300px;
+			$site_width: 1290px;
 
 			// Breakpoints ( viewport widths that serve as breakpoints for style and layout changes )
 $breakpoints: (
-	xl: 1360px,
+	xl: 1350px,
 	lg: 1200px,
 	md: 768px,
 	sm: 480px,
@@ -41,30 +41,27 @@ $col_paddings: (
 );
 
 	// Colors
-$c_accent: #ED1844;
-$c_default: #1A1C20;
-$c_additional: #333740;
-$c_additional_2: #787C82;
+$c_default: #392e2c;
+$c_accent: #fcdf51;
+$c_accent_2: #ff0000;
 $c_overlay: #191C1F;
 $c_black: #000;
 $c_white: #fff;
 $c_transparent: transparent;
 
 		// Color an background-color classes for custom use
-.c-accent { color: $c_accent; }
 .c-default { color: $c_default; }
-.c-additional { color: $c_additional; }
-.c-additional-2 { color: $c_additional_2 }
+.c-accent { color: $c_accent; }
+.c-accent-2 { color: $c_accent_2; }
 .c-overlay { color: $c_overlay; }
 .c-black { color: $c_black; }
 .c-white { color: $c_white; }
 .c-transparent { color: $c_transparent; }
 .c-on-dark { color: $c_white!important; }
 
-.bg-accent { background-color: $c_accent; }
 .bg-default { background-color: $c_default; }
-.bg-additional { background-color: $c_additional; }
-.bg-additional-2 { background-color: $c_additional_2 }
+.bg-accent { background-color: $c_accent; }
+.bg-accent-2 { background-color: $c_accent_2; }
 .bg-overlay { background-color: $c_overlay; }
 .bg-black { background-color: $c_black; }
 .bg-white { background-color: $c_white; }

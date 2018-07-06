@@ -46,10 +46,6 @@ const config = {
       filename: '404.html',
       template: 'resources/404.html'
     }),
-    new HtmlWebpackPlugin({
-      filename: 'page-example.html',
-      template: 'resources/page-example.html'
-    }),
     new MiniCssExtractPlugin({
       filename: "./css/style.css"
     }),
