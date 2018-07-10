@@ -28,6 +28,7 @@
 
 // Column paddings and site gutters
 // Pay attention to .row.row-full-width, which makes your content spread to full viewport width
+
 @media(min-width: map-get($breakpoints, xl)) {
 	.col {
 	  padding-left: map-get($col_paddings, xl);

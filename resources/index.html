@@ -2,27 +2,263 @@
 			
             <!-- site content -->
 			<main class="site-content">
-				<section class="file-section">
+
+				<section id="who-we-are" class="who-we-are">
 					<div class="container">
 						<div class="row">
 							<div class="col col-12">
-								<h1 class="h1">This is index.html</h1>
+								<div class="design-img-wrap">
+									<div class="img-wrap">
+										<img src="${require(`./img/test-image.png`)}">
+									</div>
+								</div>
+								<div class="who-we-are-block inline-x-r">
+									<h2 class="title h1">Kas mēs esam?</h2>
+									<p class="text p">Mēs esam tie, kas tic, ka Latvijā mēs varam izaudzēt ķiplokus un nodrošināt mūsu Latvijas iedzīvotājus ar kvalitatīvu produkciju no ražas līdz ražai, nodrošinot attīstību Latvijas mazajām un vidējām zemnieku saimniecībām.</p>
+								</div>
+								<div class="btn-wrap flex-x-r">
+									<a class="btn btn-1 min-w-23 flex-hor-c flex-nowrap">
+										<img src="${require(`./img/test-image.png`)}">
+										<span class="text">Skatīt video</span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="test-section">
+
+				<section id="what-we-do" class="what-we-do">
 					<div class="container">
 						<div class="row">
 							<div class="col col-12">
-								<h1 class="h1">Checking different images</h1>
-								<img src="${require(`./img/test-image.png`)}">
-								<img src="${require(`./img/test-image.jpg`)}">
-								<img src="${require(`./img/test-image.svg`)}">
+								<div class="design-img-wrap">
+									<div class="img section-bg" style="background-image: url( ${require(`./img/test-image.png`)} );">
+									</div>
+								</div>
+								<div class="what-we-do-block">
+									<h2 class="title h1">Ko mēs darām?</h2>
+									<p class="text p">Mēs neaudzējām ķiploku, jo mēs ticam, ka ķiploks ir īpašs, viņš prasa uzmanību, aprūpi un mīlestību katru dienu, ko vislabāk un galvenais pareizā apjomā var nodrošināt zemnieks tāpēc mēs darām visu pārējo - gādājam ķiploku sēklas materiālu, sagatavojam to stādīšanai, vajadzības gadījumā palīdzam iestādīt un aprūpēt, lai ķiploks justos labi un augtu bagāts. Mēs iepērkam zemnieku izaudzēto tieši no lauka, tīrām to un žāvējam, šķirojam un glabājam. Sagatavojam pārdošanai veikaliem, tirgiem, kā arī pārstrādājam tālākos produktos kurus izmanto konservēšanas cehi, gaļas un zivju pārstrādes uzņēmumi.<br>
+									Mēs meklējam latvietības sadarbības formu - mēs respektējam individualitāti, bet zinām konkurētspējas likumus, kurus apiet nav iespējams.</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
+
+				<section id="farmers" class="farmers">
+					<div class="container">
+						<div class="row">
+							<div class="col col-12">
+								<h2 class="title h1 inline-x-c">Zemniekiem</h2>
+								<div class="editor-wrapper">
+									<p>Daudzi ir dzirdējuši par ķiploku audzēšanas bumu Latvijā, kurš ir sācies pēdējo gadu laikā, nenoliedzami daudzi ir metušies iekšā audzēšanā, maigi izsakoties pārgalvīgi, investējot resursus - gan naudu, gan laiku un ļoti bieži diemžēl ciešot smagu fiasko.</p>
+									<p>Arī mēs esam piedzīvojuši smagas mācībstundas un nu jau arī "mācībgadus"</p>
+									<h3>Mēs neesam padevušies un turpinām strādāt!</h3>
+									<p>Sākam ar to, ka varam dalīties pieredzē ar "jaunajiem" un uzklausīt tos kas ir uzkrājuši pieredzi ķiploku laukā.</p>
+									<p>Izprotot vajadzības mēs organizējam kopīgu licencētu sēklas materiāla iegādi un piegādi no Eiropas ķiploku sēklaudzētājiem. Drīzumā arī no Ukrainas.</p>
+									<p>Būtisks izaicinājums sēklas materiālā sagatavošanā ir daivošana, ko mazos apjomos var paveikt ar rokām, bet pie apjoma 100 un vairāk kilogrami, tas kļūst ne tikai fiziski smagi, bet arī laikietilpīgi, kas ir būtisks apstāklis, kad "minūte druvā ir dārga". Arī šeit mēs nākam talkā - spējot sagatavot vismaz 6 tonnas daivota sēklas materiāla vienā maiņā, kas ir ne tikai ātrāk, bet arī vismaz 2 reizes lētāk, kā darot to ar rokām.</p>
+									<p>Stādīšana ir process. kuru mēs iesakām zemniekiem organizēt pašiem, jo to ir grūti prognozēt Latvijas mainīgajos klimatiskajos apstākļos, tomēr mēs nekad neatteiksim, ja būs iespēja palīdzēt grūtā brīdī.</p>
+								</div>
+								<div class="list-box bg-default c-on-dark">
+									<h3 class="h2">Mēs labprāt sadarbosimies izaudzētā realizācijā, ja:</h3>
+									<ol>
+										<li>Ķiploka sēklas materiāls ticis iegādāts caur mums vai citu zināmu respektablu kompāniju, vai palicis no iepriekšējā gada ražas, par kuru jau mēs esam sadarbojušies.</li>
+										<li>Reģistrēta Primārā ražošana PVD</li>
+										<li>Ievērotas visas normas attiecībā uz AAL lietošanu</li>
+										<li>Nav puves un kukaiņu bojāmi.</li>
+										<li>Pēc novākšanas nav pagājušas vairāk kā 48 stundas un ķiploks ir novākts atbilstoši <a href="#">rekomendācijām</a></li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="traders" class="traders">
+					<div class="container">
+						<div class="row">
+							<div class="col col-12">
+								<h2 class="title h1 inline-x-c">Tirgotājiem</h2>
+								<div class="editor-wrapper">
+									<p>Mēs cienām savus klientus un vēlamies Jūs nodrošināt ar pašu labāko, tāpēc mums ir svarīgi zināt un izprast Jūsu vēlmes, mēs esam gatavi pielāgoties līdz varam panākt savstarpēju izdevīgumu.</p>
+									<p>Mēs piedāvājam dažādu kalibru ķiploku galvas fasētas tīkla tipa maisos, kartona kastēs vai pēc skaita mazos iepakojumos, kā arī atgriežamajā tarā.</p>
+									<p>Nodrošinām produktu marķēšanu atbilstoši normatīvo aktu prasībām un tirgotāja rekomendācijām.</p>
+									<p>Mūsu prioritāte ir Latvijā audzēti ķiploki, bet pieprasījuma piedāvājuma ceļi  var būt neparedzami, tāpēc ja Latvijas ķiploks beidzas, tas ir mūsu uzdevums nodrošināt Jūs ar alternatīvu.</p>
+									<h3>HORECA sektors</h3>
+									<p>Mēs ticam, ka Jums ir būtiski ātrums, pieejamība un nemainīga kvalitāte, ja tā ir tad mēs varam Jums piedāvāt ķiploku galvas, ķiploku daivas vai lobītas ķiploku daivas vakuuma iepakojumā u.c. produktus. Slēdzam līgumus uz gadu un vienojamies par nodrošinājumu konkrētiem apjomiem/ šķirnēm/ audzētājiem.</p>
+									<h3>Pāstrādātāji</h3>
+									<p>Desa zivs vai marinēti gurķīši, tie visi ir pelnījuši Latvijas ķiploku īstai garšai.</p>
+									<p>Ķiploki lobīti, malti, ķiploku pārslas, granulas ir mūsu izaicinājums Jums piedāvāt.</p>
+									<p>Ja varbūt, kāds produkts šobrīd vēl nav pieejams, tad mūsu uzdevums ir spēt Jums to piedāvāt, tālākā izvēle jau ir Jūsu ziņā.</p>
+									<p>Slēdzam ilgtermiņa līgumus un nodrošinām nepārtrauktu piegādes ciklu.</p>
+									<h3>Tehnikas un tehnoloģisko iekārtu piegādātājiem</h3>
+									<p>Lai būtu līderi kādā nozarē, ir būtiski sadarboties ar līderiem. Mēs esam atvērti jauniem tehnoloģiskiem risinājumiem un progresīvai tehnikai ķiploku audzēšanas un pēcapstrādes jomā. Uzsākot sadarbību ar mums, jūs nodrošināsiet pieeju Latvijas liekākajai un aktīvākajai ķiploku nozares pārstāvju daļai.</p>
+									<p>Rīkojot seminārus un prezentācijas kopā ar mums Jūs iegūsiet pieeju mērķa klientiem un kvalitatīvu tūlītēju atgriezenisko saiti.</p>
+								</div>
+								<div class="list-box bg-accent">
+									<h3 class="h2">Sniedzam sekojošus pakalpojumus uzņēmumiem:</h3>
+									<ol>
+										<li>Produktu piegāde</li>
+										<li>Ķiploku tīrīšana</li>
+										<li>Ķiploku galvu šķirošana</li>
+										<li>Ķiploku galvu sadalīšana galvās</li>
+										<li>Ķiploku daivu šķirošana</li>
+										<li>Ķiploku daivu lobīšana</li>
+										<li>Iepakošana vakuumā</li>
+										<li>Ķiploku uzglabāšana</li>
+										<li>Fasēšana un marķēšana</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="news" class="news bg-default">
+					<div class="container">
+						<div class="row">
+							<div class="col col-12">
+								<div class="design-img-wrap">
+									<div class="img-wrap">
+										<img src="${require(`./img/test-image.png`)}">
+									</div>
+								</div>
+								<h2 class="title h1 inline-x-c c-on-dark">Jaunumi</h2>
+								<div class="news-block-wrap flex-x-c row">
+									<div class="news-block col col-4">
+										<div class="img-wrap">
+											<div class="img section-bg" style="background-image: url( ${require(`./img/test-image.png`)} );"></div>
+										</div>
+										<div class="contents-wrap">
+											<h4 class="title h3 c-accent">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+											<p class="text p-small c-on-dark">Praesent eu porttitor nunc, sed finibus felis. Vivamus suscipit felis augue, eu ullamcorper justo maximus eget. Integer eget neque semper, aliquam lacus in...</p>
+											<p class="date p-small" style="color: rgba(57,46,44,.8);">2018.05.18</p>
+										</div>
+									</div>
+									<div class="news-block col col-4">
+										<div class="img-wrap">
+											<div class="img section-bg" style="background-image: url( ${require(`./img/test-image.png`)} );"></div>
+										</div>
+										<div class="contents-wrap">
+											<h4 class="title h3 c-accent">Vestibulum ut tincidunt turpis, ut bibendum nisi.</h4>
+											<p class="text p-small c-on-dark">Praesent eu porttitor nunc, sed finibus felis. Vivamus suscipit felis augue, eu ullamcorper justo maximus eget. Integer eget neque semper, aliquam lacus in...</p>
+											<p class="date p-small" style="color: rgba(57,46,44,.8);">2018.04.11</p>
+										</div>
+									</div>
+									<div class="news-block col col-4">
+										<div class="img-wrap">
+											<div class="img section-bg" style="background-image: url( ${require(`./img/test-image.png`)} );"></div>
+										</div>
+										<div class="contents-wrap">
+											<h4 class="title h3 c-accent">In hac habitasse platea dictumst. Nulla facilisi. Interdum et malesuada fames ac ante.</h4>
+											<p class="text p-small c-on-dark">Praesent eu porttitor nunc, sed finibus felis. Vivamus suscipit felis augue, eu ullamcorper justo maximus eget. Integer eget neque semper, aliquam lacus in...</p>
+											<p class="date p-small" style="color: rgba(57,46,44,.8);">2018.03.07</p>
+										</div>
+									</div>
+								</div>
+								<div class="newsletter-block bg-accent">
+									<h3 class=" title h1-small">Pieraksties jaunumiem</h3>
+									<div class="contents-wrap">
+										<h4 class="h3">Ķiploku aprūpe - būtiska ir informācijas apmaiņa, piesakies jaunumiem un saņem jaunāko informāciju par to ko esam uzzinājuši mēs:</h4>
+										<ol>
+											<li>Jaunumi par AAL</li>
+											<li>Novērojumi uz lauka - slimības, kaitēkļi, šķirņu augšanas specifika</li>
+											<li>Novākšana</li>
+											<li>Novākšana</li>
+											<li>Informatīvie semināri, tehnikas prezentācijas utt.</li>
+											<li>Ražas iepirkšana no zemniekiem</li>
+										</ol>
+									</div>
+									<div class="newsletter-form-wrap bg-white">
+										<form>
+											<fieldset>
+												<label class="h3">Pierakstīties</label>
+												<div class="lower-wrap">
+												</div>
+											</fieldset>
+											<fieldset>
+												<label class="h3">E-pasta adrese:</label>
+												<div class="lower-wrap">
+													<input class="input" type="email">
+													<button class="btn btn-1 min-w-190" type="submit">Pierakstīties</button>
+												</div>
+											</fieldset>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="contacts" class="contacts bg-accent">
+					<div class="container">
+						<div class="row">
+							<div class="col col-12">
+								<h2 class="title h1 inline-x-c">Kontakti</h2>
+								<div class="contacts-block-wrap flex-x-c row">
+									<div class="contacts-block inline-x-c col col-4">
+										<h3 class="block-title h3 col-12">Sadarbība ar zemniekiem</h3>
+										<div class="img-wrap">
+											<div class="img section-bg" style="background-image: url( ${require(`./img/test-image.png`)} );"></div>
+										</div>
+										<div class="contents-wrap flex">
+											<h4 class="title h3 col-12">Māris Linde</h4>
+											<a class="phone p col-12" href="tel:+37129290101">+371 29290101</a>
+											<a class="email p col-12" href="mailto:ml@apiagro.com">ml@apiagro.com</a>
+										</div>
+									</div>
+									<div class="contacts-block inline-x-c col col-4">
+										<h3 class="block-title h3 col-12">Sadarbība ar tirgotājiem un HORECA sektoru</h3>
+										<div class="img-wrap">
+											<div class="img section-bg" style="background-image: url( ${require(`./img/test-image.png`)} );"></div>
+										</div>
+										<div class="contents-wrap flex">
+											<h4 class="title h3 col-12">Aldis Tripāns</h4>
+											<a class="phone p col-12" href="tel:+37129290101">+371 29290101</a>
+											<a class="email p col-12" href="mailto:at@apiagro.com">at@apiagro.com</a>
+										</div>
+									</div>
+									<div class="contacts-block inline-x-c col col-4">
+										<h3 class="block-title h3 col-12">Sadarbība ar Pāstrādātājiem</h3>
+										<div class="img-wrap">
+											<div class="img section-bg" style="background-image: url( ${require(`./img/test-image.png`)} );"></div>
+										</div>
+										<div class="contents-wrap flex">
+											<h4 class="title h3 col-12">Kaspars Zvaigzne</h4>
+											<a class="phone p col-12" href="tel:+37129290101">+371 29290101</a>
+											<a class="email p col-12" href="mailto:kz@apiagro.com">kz@apiagro.com</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="contact-form-and-map" class="contact-form-and-map" style="background-color: rgba(252,223,81,.8);">
+					<div class="container">
+						<div class="row">
+							<div class="col col-12">
+								<div class="contact-info-block">
+									<p class="company p">SIA "Api Agro"</p>
+									<a class="address p" href="https://www.google.com/maps/dir/?api=1&destination=Cesu+iela+31,+k-3,+Rīga,+Latvija,+LV-1012" target="_blank" rel="nofollow">Cēsu iela 31, k-3, Rīga, Latvija, LV-1012</a>
+									<a class="phone h3" href="tel:+37129290101">+371 29290101</a>
+									<a class="email h3" href="mailto:api@agro.lv">api@agro.lv</a>
+								</div>
+								<div class="contact-form-wrap">
+									<h3 class="title h2">Sazinies ar mums</h3>
+									<input class="input" type="text" placeholder="Vārds">
+									<input class="input" type="email" placeholder="E-pasts">
+									<textarea class="textarea" placeholder="Jautājums"></textarea>
+									<button class="btn btn-1 min-w-148">Aizsūtīt</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="map"></div>
+				</section>
+
 			</main>
             <!-- /site content -->
 

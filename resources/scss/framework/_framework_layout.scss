@@ -33,6 +33,7 @@
   flex-wrap: wrap;
 }
 .flex-grow { flex-grow: 1; }
+.m-l-auto { margin-left: auto; }
 
 // Block positioning
 .block-fit-parent {
@@ -127,6 +128,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: flex-nowrap !important;
 }
 .flex-important { display: flex !important; }
 .flex-inline {

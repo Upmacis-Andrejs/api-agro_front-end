@@ -5,7 +5,7 @@
 }
 
 .btn-1 {
-  min-width: 190px;
+  min-width: 213px;
   padding: 10px;
   color: $c_white;
   background-color: $c_default;
@@ -20,4 +20,11 @@
 .btn-1:active {
   color: #fff;
   background-color: $c_accent_2;
+}
+
+.min-w-148 { min-width: 148px; }
+.min-w-190 { min-width: 190px; }
+
+.input {
+  border: 1px solid $c_default;
 }

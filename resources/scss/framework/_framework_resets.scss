@@ -16,6 +16,7 @@ a,
 figure,
 input,
 label,
+fieldset,
 button,
 table,
 section,
@@ -74,6 +75,7 @@ textarea:active {
   outline: none;
 }
 input[type="checkbox"] { display: none; }
+fieldset { border: none; }
 sup { font-size: 65%; }
 section {
   width: 100%;

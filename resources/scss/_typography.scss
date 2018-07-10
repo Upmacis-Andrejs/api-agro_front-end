@@ -38,13 +38,17 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 1.2;
+  color: $c_default;
 }
-.p-small {
+.p-small,
+ol,
+ul {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.2;
 }
+body .font-15 { font-size: 15px; }
 .h1 {
   font-family: 'Pacifico', sans-serif;
   font-size: 110px;
