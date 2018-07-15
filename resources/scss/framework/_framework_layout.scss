@@ -120,6 +120,16 @@
   max-height: 100%;
 }
 
+@media(max-width: map-get($breakpoints, xl) - 1) {
+  .block-x-c-lg-down {
+    position: absolute;
+    display: block;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);   
+  }
+}
+
 // Floating
 .pull-left { float: left !important; }
 .pull-right { float: right !important; }

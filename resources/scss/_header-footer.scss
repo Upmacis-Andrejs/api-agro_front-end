@@ -2,9 +2,11 @@
 
 // Site Header
 .site-header {
+	position: absolute;
+	width: 100%;
 	padding-top: 38px;
   z-index: 99;
-	transition: background-color .2s ease-in-out;
+	transition: .4s ease-in-out;
 }
 .header-1st-row {
 	padding-top: 22px;
@@ -18,9 +20,23 @@
 }
 
 @media( max-width: $breakpoint_lg ) {
+	.site-header {
+		position: fixed;
+	}
 	.header-1st-row {
 		.main-site-logo { margin-right: 20px; }
 	}
+	.not--top .site-header {
+		padding-top: 0;
+		background-color: rgba($c_accent_lighter,.9);
+		.header-1st-row {
+			padding-top: 17px;
+			padding-bottom: 17px;
+		}
+	}
+	.not--top .site-header { transform: translateY(0)	}
+	.not--top-down .site-header { transform: translateY(-110%) }
+	body.mobile-menu-open.not--top-down .site-header { transform: translateY(0) }
 }
 
 @media( max-width: $breakpoint_md ) {
@@ -119,4 +135,5 @@ body.mobile-menu-open .site-header { background-color: $c_accent_lighter; }
 
 // Site Footer
 .site-footer {
+	min-height: 50px;
 }

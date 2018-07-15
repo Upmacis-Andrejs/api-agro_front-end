@@ -3,23 +3,28 @@
             <!-- site content -->
 			<main class="site-content">
 
-				<section id="who-we-are" class="who-we-are">
+				<section id="who-we-are" class="who-we-are bg-accent section-1">
 					<div class="container">
 						<div class="row">
 							<div class="col col-12">
 								<div class="design-img-wrap">
 									<div class="img-wrap">
-										<img src="${require(`./img/test-image.png`)}">
+										<img class="block-c" src="${require(`./img/garlic.png`)}">
 									</div>
 								</div>
-								<div class="who-we-are-block inline-x-r">
+								<div class="who-we-are-block border-block inline-x-r">
 									<h2 class="title h1">Kas mēs esam?</h2>
-									<p class="text p">Mēs esam tie, kas tic, ka Latvijā mēs varam izaudzēt ķiplokus un nodrošināt mūsu Latvijas iedzīvotājus ar kvalitatīvu produkciju no ražas līdz ražai, nodrošinot attīstību Latvijas mazajām un vidējām zemnieku saimniecībām.</p>
+									<p class="textarea p">Mēs esam tie, kas tic, ka Latvijā mēs varam izaudzēt ķiplokus un nodrošināt mūsu Latvijas iedzīvotājus ar kvalitatīvu produkciju no ražas līdz ražai, nodrošinot attīstību Latvijas mazajām un vidējām zemnieku saimniecībām.</p>
+									<div class="border border-top"></div>
+									<div class="border border-right"></div>
+									<div class="border border-bottom"></div>
 								</div>
 								<div class="btn-wrap flex-x-r">
-									<a class="btn btn-1 min-w-23 flex-hor-c flex-nowrap">
-										<img src="${require(`./img/test-image.png`)}">
-										<span class="text">Skatīt video</span>
+									<a class="btn btn-1 flex-x-c flex-nowrap">
+										<div class="inner flex-y-x">
+											<img src="${require(`./img/play.png`)}">
+											<span class="text bold">Skatīt video</span>
+										</div>
 									</a>
 								</div>
 							</div>
@@ -32,12 +37,16 @@
 						<div class="row">
 							<div class="col col-12">
 								<div class="design-img-wrap">
-									<div class="img section-bg" style="background-image: url( ${require(`./img/test-image.png`)} );">
+									<div class="large-img-wrap rotate-img">
+										<div class="inner section-bg block-c" style="background-image: url( ${require(`./img/tractor-80.jpg`)} );"></div>
+									</div>
+									<div class="small-img-wrap rotate-img">
+										<div class="inner section-bg block-c" style="background-image: url( ${require(`./img/green-80.jpg`)} );"></div>
 									</div>
 								</div>
-								<div class="what-we-do-block">
+								<div class="what-we-do-block border-block actual-borders">
 									<h2 class="title h1">Ko mēs darām?</h2>
-									<p class="text p">Mēs neaudzējām ķiploku, jo mēs ticam, ka ķiploks ir īpašs, viņš prasa uzmanību, aprūpi un mīlestību katru dienu, ko vislabāk un galvenais pareizā apjomā var nodrošināt zemnieks tāpēc mēs darām visu pārējo - gādājam ķiploku sēklas materiālu, sagatavojam to stādīšanai, vajadzības gadījumā palīdzam iestādīt un aprūpēt, lai ķiploks justos labi un augtu bagāts. Mēs iepērkam zemnieku izaudzēto tieši no lauka, tīrām to un žāvējam, šķirojam un glabājam. Sagatavojam pārdošanai veikaliem, tirgiem, kā arī pārstrādājam tālākos produktos kurus izmanto konservēšanas cehi, gaļas un zivju pārstrādes uzņēmumi.<br>
+									<p class="textarea p">Mēs neaudzējām ķiploku, jo mēs ticam, ka ķiploks ir īpašs, viņš prasa uzmanību, aprūpi un mīlestību katru dienu, ko vislabāk un galvenais pareizā apjomā var nodrošināt zemnieks tāpēc mēs darām visu pārējo - gādājam ķiploku sēklas materiālu, sagatavojam to stādīšanai, vajadzības gadījumā palīdzam iestādīt un aprūpēt, lai ķiploks justos labi un augtu bagāts. Mēs iepērkam zemnieku izaudzēto tieši no lauka, tīrām to un žāvējam, šķirojam un glabājam. Sagatavojam pārdošanai veikaliem, tirgiem, kā arī pārstrādājam tālākos produktos kurus izmanto konservēšanas cehi, gaļas un zivju pārstrādes uzņēmumi.<br>
 									Mēs meklējam latvietības sadarbības formu - mēs respektējam individualitāti, bet zinām konkurētspējas likumus, kurus apiet nav iespējams.</p>
 								</div>
 							</div>
@@ -45,11 +54,11 @@
 					</div>
 				</section>
 
-				<section id="farmers" class="farmers">
+				<section id="farmers" class="farmers bg-accent">
 					<div class="container">
 						<div class="row">
 							<div class="col col-12">
-								<h2 class="title h1 inline-x-c">Zemniekiem</h2>
+								<h2 class="title h1 small inline-x-c m-b-section-title">Zemniekiem</h2>
 								<div class="editor-wrapper">
 									<p>Daudzi ir dzirdējuši par ķiploku audzēšanas bumu Latvijā, kurš ir sācies pēdējo gadu laikā, nenoliedzami daudzi ir metušies iekšā audzēšanā, maigi izsakoties pārgalvīgi, investējot resursus - gan naudu, gan laiku un ļoti bieži diemžēl ciešot smagu fiasko.</p>
 									<p>Arī mēs esam piedzīvojuši smagas mācībstundas un nu jau arī "mācībgadus"</p>
@@ -60,7 +69,7 @@
 									<p>Stādīšana ir process. kuru mēs iesakām zemniekiem organizēt pašiem, jo to ir grūti prognozēt Latvijas mainīgajos klimatiskajos apstākļos, tomēr mēs nekad neatteiksim, ja būs iespēja palīdzēt grūtā brīdī.</p>
 								</div>
 								<div class="list-box bg-default c-on-dark">
-									<h3 class="h2">Mēs labprāt sadarbosimies izaudzētā realizācijā, ja:</h3>
+									<h3 class="h2 small title">Mēs labprāt sadarbosimies izaudzētā realizācijā, ja:</h3>
 									<ol>
 										<li>Ķiploka sēklas materiāls ticis iegādāts caur mums vai citu zināmu respektablu kompāniju, vai palicis no iepriekšējā gada ražas, par kuru jau mēs esam sadarbojušies.</li>
 										<li>Reģistrēta Primārā ražošana PVD</li>
@@ -78,7 +87,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col col-12">
-								<h2 class="title h1 inline-x-c">Tirgotājiem</h2>
+								<h2 class="title h1 small inline-x-c m-b-section-title">Tirgotājiem</h2>
 								<div class="editor-wrapper">
 									<p>Mēs cienām savus klientus un vēlamies Jūs nodrošināt ar pašu labāko, tāpēc mums ir svarīgi zināt un izprast Jūsu vēlmes, mēs esam gatavi pielāgoties līdz varam panākt savstarpēju izdevīgumu.</p>
 									<p>Mēs piedāvājam dažādu kalibru ķiploku galvas fasētas tīkla tipa maisos, kartona kastēs vai pēc skaita mazos iepakojumos, kā arī atgriežamajā tarā.</p>
@@ -96,7 +105,7 @@
 									<p>Rīkojot seminārus un prezentācijas kopā ar mums Jūs iegūsiet pieeju mērķa klientiem un kvalitatīvu tūlītēju atgriezenisko saiti.</p>
 								</div>
 								<div class="list-box bg-accent">
-									<h3 class="h2">Sniedzam sekojošus pakalpojumus uzņēmumiem:</h3>
+									<h3 class="h2 small title">Sniedzam sekojošus pakalpojumus uzņēmumiem:</h3>
 									<ol>
 										<li>Produktu piegāde</li>
 										<li>Ķiploku tīrīšana</li>
@@ -123,7 +132,7 @@
 										<img src="${require(`./img/test-image.png`)}">
 									</div>
 								</div>
-								<h2 class="title h1 inline-x-c c-on-dark">Jaunumi</h2>
+								<h2 class="title h1 inline-x-c c-on-dark m-b-section-title">Jaunumi</h2>
 								<div class="news-block-wrap flex-x-c row">
 									<div class="news-block col col-4">
 										<div class="img-wrap">
@@ -195,7 +204,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col col-12">
-								<h2 class="title h1 inline-x-c">Kontakti</h2>
+								<h2 class="title h1 inline-x-c m-b-section-title">Kontakti</h2>
 								<div class="contacts-block-wrap flex-x-c row">
 									<div class="contacts-block inline-x-c col col-4">
 										<h3 class="block-title h3 col-12">Sadarbība ar zemniekiem</h3>
@@ -236,7 +245,7 @@
 					</div>
 				</section>
 
-				<section id="contact-form-and-map" class="contact-form-and-map" style="background-color: rgba(252,223,81,.8);">
+				<section id="contact-form-and-map" class="contact-form-and-map bg-accent-lighter">
 					<div class="container">
 						<div class="row">
 							<div class="col col-12">

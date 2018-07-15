@@ -49,35 +49,91 @@ ul {
   line-height: 1.2;
 }
 body .font-15 { font-size: 15px; }
-.h1 {
+.h1,
+.editor-wrapper h1 {
   font-family: 'Pacifico', sans-serif;
-  font-size: 110px;
+  font-size: 100px;
   font-weight: 400;
   line-height: 1.2;
 }
-.h2 {
+.h2,
+.editor-wrapper h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
 }
-.h3 {
+.h3,
+.editor-wrapper h3 {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
 }
-.a, a {
+.header-menu a,
+.lang-switcher a {
   text-decoration: none;
   color: $c_default;
 }
-/*.a, a {
+.a, a {
   color: $c_accent;
   &:hover,
   &:focus,
   &:active {
     text-decoration: none;
   }
-}*/
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .h1 { font-size: 90px; }
+}
+
+@media( max-width: $breakpoint_md ) {
+  .h1 { font-size: 60px; }
+  .h1.small { font-size: 50px; }
+  .h2.small { font-size: 24px; }
+}
+
+.textarea br {
+  content: "";
+  display: block;
+  margin-top: 20px;
+}
+
+// Editor wrapper styles
+.editor-wrapper {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 8px;
+  }
+  ul,
+  ol,
+  li { margin-bottom: 14px; }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  li {
+    &:last-child { margin-bottom: 0 !important; }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 35px;
+  }
+}

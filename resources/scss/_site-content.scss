@@ -4,6 +4,12 @@
 .site-content { 
 }
 
+  // Compensate for header height
+@media( max-width: $breakpoint_lg ) {
+  .section-1 { padding-top: 157px; }
+}
+
+  // Button
 .btn-1 {
   min-width: 213px;
   padding: 10px;
@@ -13,6 +19,7 @@
   text-decoration: none;
   text-transform: uppercase;
   @extend .p;
+  .text { top: 2px; }
 }
 
 .btn-1:focus,
@@ -25,6 +32,291 @@
 .min-w-148 { min-width: 148px; }
 .min-w-190 { min-width: 190px; }
 
+  // Margins
+.m-b-section-title { margin-bottom: 35px; }
+
+  // Input styles
 .input {
   border: 1px solid $c_default;
+}
+
+  // Border block
+.border-block {
+  padding: 50px 60px 64px;
+  &.actual-borders {
+    padding: 25px 50px 64px;
+    border: 10px solid $c_default
+  }
+  .border {
+    position: absolute;
+    background-color: $c_default;
+  }
+  .border-right,
+  .border-left {
+    width: 10px;
+  }
+  .border-top,
+  .border-bottom {
+    height: 10px;
+  }
+  .border-top {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+  }
+  .border-right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+  }
+  .border-bottom {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .border-left {
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .border-block {
+    padding: 0 !important;
+    border: none !important;
+    .border { display: none; }
+  }
+}
+
+  // Desing image block
+.design-img-wrap { z-index: 2; }
+
+  // Rotate images
+.rotate-img {
+  transform-origin: 0 100%;
+  transform: rotate(20deg);
+  overflow-x: visible;
+  .inner {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Who we are section
+.who-we-are {
+  padding-top: calc(225px + 68px);
+  padding-bottom: 86px;
+  .design-img-wrap {
+    position: absolute;
+    top: calc(-225px - 68px);
+    right: auto;
+    left: 48.864%;
+    //left: calc(630px + 15px);
+    bottom: auto;
+    transform: translateX(-100%);
+    width: 1004px;
+    //height: 1100px;
+    height: auto;
+    .img-wrap {
+      padding-top: 109.5618%;
+      img {
+        width: 100%;
+        max-height: none;
+      }
+    }
+  }
+  .btn-wrap { margin-top: 26px; }
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .who-we-are {
+    padding-top: 100px;
+    padding-bottom: 110px;
+    .design-img-wrap {
+      position: relative;
+      top: 0;
+      right: auto;
+      bottom: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 552px;
+      height: auto;
+      .img-wrap {
+        position: relative;
+        margin-bottom: -7.26%;
+      }
+    }
+  }
+}
+
+  // Who we are block
+.who-we-are-block {
+  padding-left: 550px;
+  .title {
+    margin-left: -120px;
+    white-space: nowrap;
+  }
+  .border {
+    position: absolute;
+    background-color: $c_default;
+  }
+  .border-right,
+  .border-left {
+    width: 10px;
+  }
+  .border-top,
+  .border-bottom {
+    height: 10px;
+  }
+  .border-bottom { left: 34.884%; }
+  .border-left { display: none; }  
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .who-we-are-block {
+    padding-left: 0;
+    .title {
+      margin-left: 0;
+      white-space: normal;
+    }
+  }
+}
+
+// What we do section
+.what-we-do {
+  padding-top: 262px;
+  padding-bottom: 150px;
+  .title {
+    margin-right: -82px;
+    white-space: nowrap;
+  }
+  .design-img-wrap {
+    position: absolute;
+    top: -114px;
+    right: 453px;
+    bottom: auto;
+    left: auto;
+    transform: translateX(100%);
+    width: 500px;
+    height: 500px;
+    .large-img-wrap {
+      height: calc(500px / 0.93969262);
+    }
+    .small-img-wrap {
+      height: calc(253px / 0.93969262);
+    }
+  }
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .what-we-do {
+    padding-top: 90px;
+    padding-bottom: 88px;
+    .design-img-wrap {
+      position: relative;
+      top: 0;
+      right: 0;
+      transform: none;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .what-we-do {
+    padding-top: 90px;
+    padding-bottom: 88px;
+    .design-img-wrap {
+      position: relative;
+      top: 0;
+      right: 0;
+      transform: none;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+  // What we do block
+.what-we-do-block.actual-borders {
+  padding-right: 487px;
+}
+
+// Farmers section
+.farmers {
+  padding-top: 98px;
+  padding-bottom: 134px;
+  .list-box {
+    padding: 30px 30px 35px;
+    margin-top: 65px;
+    .title {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .farmers {
+    padding-top: 113px;
+    padding-bottom: 142px;
+    .list-box {
+      padding: 35px 30px 40px;
+      margin-top: 35px;
+      li { margin-bottom: 14px; }
+      li:last-child { margin-bottom: 0; }
+    }
+  }
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .farmers {
+    padding-top: 113px;
+    padding-bottom: 113px;
+    .list-box {
+      padding: 30px 30px 35px;
+      margin-top: 35px;
+    }
+  }
+}
+
+// Traders section
+.traders {
+  padding-top: 125px;
+  padding-bottom: 140px;
+  .list-box {
+    padding: 30px 30px 26px;
+    margin-top: 38px;
+    .title { margin-bottom: 16px; }
+  }
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .traders {
+    padding-top: 140px;
+    padding-bottom: 205px;
+    .list-box {
+      padding: 30px 30px 34px;
+      margin-top: 54px;
+      .title { margin-bottom: 12px; }
+    }
+  }
+}
+
+@media( max-width: $breakpoint_md ) {
+  .traders {
+    padding-top: 72px;
+    padding-bottom: 210px;
+    .list-box {
+      padding: 26px 30px 22px;
+      margin-top: 48px;
+    }
+  }
 }

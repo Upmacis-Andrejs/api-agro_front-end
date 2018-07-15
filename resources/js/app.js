@@ -20,14 +20,24 @@ $(document).ready(function() {
 
   // Add CSS class to Site Header when scrollTop position of the document is not 0
   var $lastY = $window.scrollTop();
+  var $document = $(document);
   function add_not_top() {
     $body.addClass("not--top");
   }
   function remove_not_top() {
     $body.removeClass("not--top");
   }
-  var $timeout_add_not_top;
-  var $timeout_remove_not_top;
+  function add_not_top_down() {
+    $body.addClass("not--top-down");
+  }
+  function remove_not_top_down() {
+    $body.removeClass("not--top-down");
+  }
+  var $timeout_add_not_top
+  var $timeout_remove_not_top
+  var $timeout_add_not_top_down
+  var $timeout_remove_not_top_down
+
 
   if( $lastY > 50 ) {
     add_not_top();
@@ -44,11 +54,17 @@ $(document).ready(function() {
     $lastY = $currentY;
     if ( $document.scrollTop() > 50 && y == 'down' ) {
       $timeout_add_not_top = setTimeout(add_not_top, 150);
-    } else if ( $document.scrollTop() <= 100 && y == 'up' ) {
+    } else if ( $document.scrollTop() <= 80 && y == 'up' ) {
       $timeout_remove_not_top = setTimeout(remove_not_top, 150);
+    }
+    if ( $document.scrollTop() > 300 && y == 'down' ) {
+      $timeout_add_not_top_down = setTimeout(add_not_top_down, 150);
+    } else if  ( y == 'up' ) {
+      $timeout_add_not_top_down = setTimeout(remove_not_top_down, 150);
     }
 
   });
+
 
   // scroll the page according to clicked navigation item
   $(".header-menu a").click(function() {
