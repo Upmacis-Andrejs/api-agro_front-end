@@ -50,4 +50,50 @@ $(document).ready(function() {
 
   });
 
+  // scroll the page according to clicked navigation item
+  $(".header-menu a").click(function() {
+    var $href = $(this).attr('href');
+      $("html, body").animate({
+          scrollTop: $($href).offset().top + 1
+      }, 400);
+    $(".mobile-menu-icon").removeClass("open");
+    $("body").removeClass("mobile-menu-open");
+    $(".mobile-menu-wrap").stop(true, true).slideUp();
+  });
+
+  // Toggle mobile menu
+  $(".mobile-menu-icon").click(function() {
+    $(this).toggleClass('open');
+    $("body").toggleClass('mobile-menu-open');
+    $(".mobile-menu-wrap").stop(true, true).slideToggle();
+    return false;
+  });
+
+  // Hide mobile menu when clicked outside of it
+  $(document).mouseup(function (e) {
+    if ( $(".mobile-menu-icon").hasClass('open') ) {
+      var $container = $(".site-header");
+      if (
+          !$container.is(e.target) // if the target of the click isn't the container...
+          && $container.has(e.target).length === 0 // ... nor a descendant of the container
+        )
+      {
+        $(".mobile-menu-icon").removeClass("open");
+        $("body").removeClass("mobile-menu-open");
+        $(".mobile-menu-wrap").stop(true, true).slideUp();
+        return false;
+      }
+    }
+  });
+
+  // Close mobile menu when resized to desktop device
+  $(window).resize(function() {
+    var $windw_width = $(window).width();
+    if( $windw_width >= 1200 ) {
+      $(".mobile-menu-icon").removeClass("open");
+      $('body').removeClass('mobile-menu-open');
+      $(".mobile-menu-wrap").css('display', '');
+    }
+  });
+
 });

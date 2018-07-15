@@ -43,6 +43,7 @@ $col_paddings: (
 	// Colors
 $c_default: #392e2c;
 $c_accent: #fcdf51;
+$c_accent_lighter: rgba(#fee050,.8);
 $c_accent_2: #ff0000;
 $c_overlay: #191C1F;
 $c_black: #000;
@@ -52,6 +53,7 @@ $c_transparent: transparent;
 		// Color an background-color classes for custom use
 .c-default { color: $c_default; }
 .c-accent { color: $c_accent; }
+.c-accent-lighter { color: $c_accent_lighter; }
 .c-accent-2 { color: $c_accent_2; }
 .c-overlay { color: $c_overlay; }
 .c-black { color: $c_black; }
@@ -61,6 +63,7 @@ $c_transparent: transparent;
 
 .bg-default { background-color: $c_default; }
 .bg-accent { background-color: $c_accent; }
+.bg-accent-lighter { background-color: $c_accent_lighter; }
 .bg-accent-2 { background-color: $c_accent_2; }
 .bg-overlay { background-color: $c_overlay; }
 .bg-black { background-color: $c_black; }
@@ -68,7 +71,7 @@ $c_transparent: transparent;
 .bg-transparent { background-color: $c_transparent; }
 
 	// Others ( add all values that you think should be variables )
-$box_shadow: 0px 2px 6px 0px rgba(0,0,0,.6);
+$box_shadow: 0px 2px 6px 0px rgba($c_default,.6);
 
 // Import Styles ( comment out any partial of framework that does not fit your needs )
 	// Framework

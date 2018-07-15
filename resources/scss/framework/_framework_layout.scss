@@ -35,6 +35,37 @@
 .flex-grow { flex-grow: 1; }
 .m-l-auto { margin-left: auto; }
 
+@media(min-width: map-get($breakpoints, xl)) {
+  .flex-x-c-xl {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .flex-x-r-xl {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+@media(min-width: map-get($breakpoints, lg)) and (max-width: map-get($breakpoints, xl) - 1) {
+  .flex-x-c-lg {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .flex-x-r-lg {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+@media(max-width: map-get($breakpoints, lg) - 1) {
+  .flex-y-c-md-down {
+    display: flex;
+    align-items: center;
+  }
+}
+
 // Block positioning
 .block-fit-parent {
   position: absolute;
@@ -130,7 +161,7 @@
   flex-wrap: wrap;
 }
 .flex-nowrap {
-  flex-wrap: flex-nowrap !important;
+  flex-wrap: nowrap !important;
 }
 .flex-important { display: flex !important; }
 .flex-inline {
@@ -146,22 +177,28 @@
 .inline { display: inline; }
 .inline-important { display: inline !important; }
 
-// Hide
+// Hide and show
 .hide { display: none !important; }
+.show { display: block !important; }
 @media(min-width: map-get($breakpoints, xl)) {
   .hide-xl { display: none !important; }
+  .show-xl { display: block !important; }
 }
 @media(min-width: map-get($breakpoints, lg)) and (max-width: map-get($breakpoints, xl) - 1) {
   .hide-lg { display: none !important; }
+  .show-lg { display: block !important; }
 }
 @media(min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg) - 1) {
   .hide-md { display: none !important; }
+  .show-md { display: block !important; }
 }
 @media(min-width: map-get($breakpoints, sm)) and (max-width: map-get($breakpoints, md) - 1) {
   .hide-sm { display: none !important; }
+  .show-sm { display: block !important; }
 }
 @media(max-width: map-get($breakpoints, sm) - 1) {
   .hide-xs { display: none !important; }
+  .show-xs { display: block !important; }
 }
 
 // Visibility
