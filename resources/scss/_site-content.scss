@@ -320,3 +320,59 @@
     }
   }
 }
+
+// News section
+.news {
+  padding-top: 115px;
+  .design-img-wrap {
+    position: absolute;
+    top: calc(-240px - 115px);
+    right: auto;
+    bottom: auto;
+    left: 27.424%;
+    transform: translateX(-100%);
+    width: 800px;
+    height: auto;
+  }
+}
+.news-block {
+  .img { padding-top: 100% }
+  .contents-wrap {
+    margin-top: 18px;
+    .text { margin-top: 10px; }
+    .date { margin-top: 8px; }
+  }
+}
+
+// Contacts section
+.contacts {
+  padding-top: 266px;
+  padding-bottom: 122px;
+}
+.contacts-block-wrap {
+  margin-top: 40px;
+}
+.contacts-block {
+  .block-title { margin-bottom: 8px; }
+  .block-title,
+  .img-wrap,
+  .contents-wrap {
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+  }
+  .img {
+    padding-top: 100%;
+    border-radius: 50%;
+  }
+  .contents-wrap { margin-top: 12px; }
+  a {
+    display: block;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
