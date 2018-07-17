@@ -321,6 +321,31 @@
   }
 }
 
+  // Height for 3 column layout
+.height-for-3-col {
+  margin-right: -30px;
+  li {
+    width: calc(100% / 3);
+    padding-right: 30px;
+  }
+}
+
+@media( max-width: $breakpoint_lg ) {
+  .height-for-3-col {
+    li {
+      width: calc(100% / 2);
+    }
+  }
+}
+
+@media( max-width: $breakpoint_md ) {
+  .height-for-3-col {
+    li {
+      width: 100%;
+    }
+  }
+}
+
 // News section
 .news {
   padding-top: 115px;
