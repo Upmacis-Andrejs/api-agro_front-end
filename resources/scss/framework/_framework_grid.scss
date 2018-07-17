@@ -6,6 +6,7 @@
 	max-width: $site_width + map-get($gutters, xl) * 2;
 	margin: 0 auto;
 }
+.container.small { max-width: 850px; }
 
 // Rows
 .row {

@@ -113,6 +113,65 @@ $(document).ready(function() {
   });
 
   // Calculate div height for vertical 3 column layout
+  function heightFor2Col() {
+    if( $('.js-height-for-2-col').length > 0 ) {
+
+      var $windowWidth = $(window).outerWidth();
+      var $calcHeight = $('.js-height-for-2-col');
+
+      // For desktop and tablet devices
+      if( $windowWidth >= 768 ) {
+
+        $calcHeight.each(function () {
+
+          $(this).addClass('flex-t-column height-for-2-col');
+          var totalHeight = 0;
+          var $calcHeightBlock = $(this).children('li, .js-calc-height');
+          $calcHeightBlock.each(function () {
+              totalHeight += parseInt($(this).outerHeight(true), 10)
+          });
+          var setHeight = 0;
+          var setHeightReverse = 0;
+          var halfHeight = totalHeight / 2;
+
+          $calcHeightBlock.each(function () {
+              setHeight += parseInt($(this).outerHeight(true), 10)
+              if (setHeight >= halfHeight) {
+                  return false
+              }
+          });
+          $($calcHeightBlock.get().reverse()).each(function () {
+              setHeightReverse += parseInt($(this).outerHeight(true), 10)
+              if (setHeightReverse >= halfHeight) {
+                  return false
+              }
+          });
+
+          if (setHeight < setHeightReverse) {
+              $(this).css('height', parseInt(setHeight + 2))
+          } else {
+              $(this).css('height', parseInt(setHeightReverse + 2))
+          }
+
+        });
+
+      // For mobile devices (1 column)
+      } else {
+
+        $calcHeight.each(function () {
+            $(this).css('height', '');
+        });
+
+      }
+    }
+
+  }
+  heightFor2Col();
+  $(window).resize(function() {
+    heightFor2Col();
+  });
+
+  // Calculate div height for vertical 3 column layout
   function heightFor3Col() {
     if( $('.js-height-for-3-col').length > 0 ) {
 
@@ -210,6 +269,31 @@ $(document).ready(function() {
   heightFor3Col();
   $(window).resize(function() {
     heightFor3Col();
+  });
+
+  // Match specific element heights within parent
+  function matchHeights() {
+    if( $('.js-equal-height-wrap').length > 0 ) {
+
+      if( $(window).outerWidth() >=768 ) {
+        $('.js-equal-height-wrap').each(function() {
+          var $equalHeightBlock = $(this).find('.js-equal-height');
+          var $heights = $equalHeightBlock.map(function() {
+            return $(this).outerHeight()
+          }).get();
+          var $maxHeight = parseFloat(Math.max.apply(null, $heights));
+          $equalHeightBlock.css('height', $maxHeight);
+        });
+      } else {
+        $('.js-equal-height-wrap').each(function() {
+          $(this).find('.js-equal-height').css('height', '');
+        });
+      }
+    }
+  }
+  matchHeights();
+  $(window).resize(function() {
+    matchHeights();
   });
 
 });
