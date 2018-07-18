@@ -28,7 +28,7 @@ $gutters: (
 	lg: 30px,
 	md: 30px,
 	sm: 30px,
-	xs: 30px
+	xs: 20px
 );
 
 			// Column paddings ( left and right ) that can be changed according to breakpoints
@@ -42,8 +42,9 @@ $col_paddings: (
 
 	// Colors
 $c_default: #392e2c;
+$c_default_lighter: #382e2b;
 $c_accent: #fcdf51;
-$c_accent_lighter: #fff96b;
+$c_accent_lighter: #FFE46E;
 $c_accent_2: #ff0000;
 $c_overlay: #191C1F;
 $c_black: #000;
@@ -52,6 +53,7 @@ $c_transparent: transparent;
 
 		// Color an background-color classes for custom use
 .c-default { color: $c_default; }
+.c-default-lighter { color: $c_default_lighter; }
 .c-accent { color: $c_accent; }
 .c-accent-lighter { color: $c_accent_lighter; }
 .c-accent-2 { color: $c_accent_2; }
@@ -62,6 +64,7 @@ $c_transparent: transparent;
 .c-on-dark { color: $c_white!important; }
 
 .bg-default { background-color: $c_default; }
+.bg-default-lighter { background-color: $c_default_lighter; }
 .bg-accent { background-color: $c_accent; }
 .bg-accent-lighter { background-color: $c_accent_lighter; }
 .bg-accent-2 { background-color: $c_accent_2; }

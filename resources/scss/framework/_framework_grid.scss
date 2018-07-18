@@ -6,7 +6,7 @@
 	max-width: $site_width + map-get($gutters, xl) * 2;
 	margin: 0 auto;
 }
-.container.small { max-width: 850px; }
+.container.small { max-width: 850px + map-get($gutters, xl) * 2; }
 
 // Rows
 .row {
@@ -405,6 +405,15 @@
     max-width: 100%;
   }
 }
+@media(max-width: map-get($breakpoints, lg) - 1) {
+  .col-md-down-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 
 @media(min-width: map-get($breakpoints, sm)) and (max-width: map-get($breakpoints, md) - 1) {
   .col-sm-1 {

@@ -1,22 +1,75 @@
 /* Site header and footer */
 
 // Site Header
+.site-header,
+.header-1st-row,
+.header-1st-row .main-site-logo img,
+.mobile-menu-wrap {
+//.header-menu {
+// .header-menu li a,
+// .lang-switcher li a {
+	transition: .4s ease-in-out;
+}
+.mobile-menu-wrap .main-site-logo img { transition: opacity .4s ease-in-out; }
 .site-header {
-	position: absolute;
+	position: fixed; // Change to absolute to remove fixed state
 	width: 100%;
 	padding-top: 38px;
   z-index: 99;
-	transition: .4s ease-in-out;
 }
 .header-1st-row {
 	padding-top: 22px;
 	padding-bottom: 22px;
 	z-index: 2;
-	.main-site-logo { max-height: 75px; }
+	.main-site-logo img { max-height: 75px; }
 }
 .mobile-menu-wrap {
 	padding-top: 10px;
 	padding-bottom: 10px;
+	.main-site-logo img {
+		max-width: 0;
+		height: auto;
+		opacity: 0;
+	}
+}
+.not--top {
+	.site-header {
+		padding-top: 0;
+		background-color: rgba($c_accent_lighter,.9);
+		transform: translateY(0);
+	}
+}
+.not--top-down .site-header { transform: translateY(-110%) }
+
+@media( min-width: $breakpoint_lg + 1 ) {
+	.not--top {
+		.site-header {
+			.header-1st-row {
+				padding: 0;
+				line-height: 0;
+				max-height: 0;
+				opacity: 0;
+				.main-site-logo img { max-height: 0; }
+			}
+			.mobile-menu-wrap {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				.main-site-logo img {
+					max-width: 100%;
+					max-height: 60px;
+					opacity: 1;
+				}
+				.header-menu {
+					margin-right: 30px;
+					margin-left: 30px;
+				}
+				.header-menu li a,
+				.lang-switcher li a {
+					font-size: 16px;
+				}
+			}
+		}
+	}
 }
 
 @media( max-width: $breakpoint_lg ) {
@@ -24,18 +77,17 @@
 		position: fixed;
 	}
 	.header-1st-row {
-		.main-site-logo { margin-right: 20px; }
-	}
-	.not--top .site-header {
-		padding-top: 0;
-		background-color: rgba($c_accent_lighter,.9);
-		.header-1st-row {
-			padding-top: 17px;
-			padding-bottom: 17px;
+		.main-site-logo {
+			margin-right: 20px;
 		}
 	}
-	.not--top .site-header { transform: translateY(0)	}
-	.not--top-down .site-header { transform: translateY(-110%) }
+	.not--top .site-header {
+		.header-1st-row {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			.main-site-logo img { max-height: 60px; }
+		}
+	}
 	body.mobile-menu-open.not--top-down .site-header { transform: translateY(0) }
 }
 

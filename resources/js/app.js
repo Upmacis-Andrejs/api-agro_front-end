@@ -18,6 +18,86 @@ $(document).ready(function() {
       });
   }
 
+  // Position shadow for .newsletter-block
+  function positionShadow() {
+    if( $('.newsletter-block .shadow').length > 0 ) {
+      var $windowWidth = $(window).outerWidth();
+      var $shadow = $('.newsletter-block .shadow');
+      var $width = $('.newsletter-block').innerWidth();
+      if ( $windowWidth >= 1200 ) {
+        $shadow.css('bottom', -parseInt($width * 0.06));
+      } else if ( $windowWidth < 1200 && $windowWidth >= 768 ) {
+        $shadow.css('bottom', -parseInt($width * 0.085));
+      } else {
+        $shadow.css('bottom', -parseInt($width * 0.12));
+      }
+    }
+  }
+  positionShadow();
+  $(window).resize(function() {
+    positionShadow();
+  });
+
+  // Position #map element
+  function positionMap() {
+    if( $('#map').length > 0 ) {
+      var $map = $('#map');
+      var $body_w = $body.width();
+      $map.addClass('row row-full-w');
+      if( $(window).outerWidth() >= 1200 ) {
+        $map.parent().css('padding-bottom', '');
+        var $height = $map.closest('.contact-form-and-map').innerHeight();
+        $map.css({
+          'position' : 'absolute',
+          'top' : 0,
+          'bottom' : 0,
+          'width': $body_w,
+          'height' : $height,
+          'padding-top' : '',
+          'margin-left': parseInt(-$body_w / 2)
+        });
+      } else {
+        $map.css({
+          'position' : 'absolute',
+          'top' : 'auto',
+          'bottom' : 0,
+          'width': $body_w,
+          'height' : '',
+          'padding-top' : parseInt($body_w * 0.84635),
+          'margin-left': parseInt(-$body_w / 2)
+        });
+        $map.parent().css('padding-bottom', parseInt($body_w * 0.84635));
+      }
+    }
+  }
+  positionMap();
+  $(window).resize(function() {
+    positionMap();
+  });
+
+  // Calculate height for .contact-wrap decoration element (triangle)
+  function decorHeight() {
+    if( $('#decor-triangle').length > 0 ) {
+      var $decorTriangle = $('#decor-triangle');
+      if( $(window).outerWidth() >= 1200 ) {
+        var $height = $decorTriangle.closest('.contact-form-and-map').innerHeight();
+        $decorTriangle.css({
+          'border-top-width' : $height,
+          'border-right-width' : 228,//parseInt($height * 0.35),
+        });
+      } else {
+        $decorTriangle.css({
+          'border-top-width' : '',
+          'border-right-width' : '',
+        });
+      }
+    }
+  }
+  decorHeight();
+  $(window).resize(function() {
+    decorHeight();
+  });
+
   // Add CSS class to Site Header when scrollTop position of the document is not 0
   var $lastY = $window.scrollTop();
   var $document = $(document);
@@ -66,7 +146,7 @@ $(document).ready(function() {
   });
 
 
-  // scroll the page according to clicked navigation item
+  // Scroll the page according to clicked navigation item
   $(".header-menu a").click(function() {
     var $href = $(this).attr('href');
       $("html, body").animate({
@@ -294,6 +374,67 @@ $(document).ready(function() {
   matchHeights();
   $(window).resize(function() {
     matchHeights();
+  });
+
+  // Position newsletter block
+  function positionNewsletter() {
+    if( $('.newsletter-block').length > 0 ) {
+      var $newsletterBlock = $('.newsletter-block');
+      var $newsletterHeight = $newsletterBlock.height();
+      var $space = parseInt($newsletterHeight / 2);
+      $newsletterBlock.css('margin-bottom', -$space);
+      $('.contacts').css('padding-top', $space);
+    }
+  }
+  positionNewsletter();
+  $(window).resize(function() {
+    positionNewsletter();
+  });
+
+  // Position .what-we-do section's small decor image in responsive views
+  function positionSmallDecorImg() {
+    if( $('.what-we-do-block .design-img-wrap .small-img').length > 0 ) {
+      var $windowWidth = $(window).outerWidth();
+      var $img = $('.what-we-do-block .design-img-wrap .small-img');
+      var $width = $img.innerWidth();
+      if ( $windowWidth < 1200 ) {
+        $img.css('margin-top', -parseInt($width * 0.2875));
+      } else {
+        $img.css('margin-top', '');
+      }
+    }
+  }
+  positionSmallDecorImg();
+  $(window).resize(function() {
+    positionSmallDecorImg();
+  });
+
+  // Position block's decoration elements
+  function positionBlockDecoration() {
+    if( $('.list-box .box-decor').length > 0 ) {
+      $('.list-box').each(function() {
+        var $this = $(this);
+        var $windowWidth = $(window).outerWidth();
+        var $block_1 = $this.find('.box-decor-1');
+        var $block_2 = $this.find('.box-decor-2');
+        var $height_1 = $block_1.innerHeight();
+        var $height_2 = $block_2.innerHeight();
+        if ( $windowWidth >= 1200 ) {
+          $block_1.css('top', -parseInt($height_1 * 0.16234));
+          $block_2.css('bottom', -parseInt($height_2 * 0.37931));
+        } else if ( $windowWidth < 1200 && $windowWidth >= 768 ) {
+          $block_1.css('top', -parseInt($height_1 * 0.14279));
+          $block_2.css('bottom', -parseInt($height_2 * 0.34167));
+        } else {
+          $block_1.css('top', -parseInt($height_1 * 0.16216));
+          $block_2.css('bottom', -parseInt($height_2 * 0.37143));
+        }
+      });
+    }
+  }
+  positionBlockDecoration();
+  $(window).resize(function() {
+    positionBlockDecoration();
   });
 
 });

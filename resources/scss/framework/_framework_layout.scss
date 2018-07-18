@@ -61,6 +61,11 @@
   }
 }
 @media(max-width: map-get($breakpoints, lg) - 1) {
+  .flex-x-c-md-down {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .flex-y-c-md-down {
     display: flex;
     align-items: center;

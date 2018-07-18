@@ -49,7 +49,7 @@ img,
 .wrap { white-space: initial!important; }
 .overflow-hidden { overflow: hidden; }
 .nbsp-after:after { content: "\00a0"; }
-.bold { font-weight: 700; }
+body .bold { font-weight: 700; }
 
   // Inline positioning
 .inline-y-c { vertical-align: middle; }
@@ -107,3 +107,6 @@ input[type="submit"]:hover {
 [disabled] {
   pointer-events: none;
 }
+
+// Z-index
+.z-2 { z-index: 2; }
