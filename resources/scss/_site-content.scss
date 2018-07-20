@@ -527,7 +527,10 @@ input[type="radio"]:checked ~ .label-radio:before {
   .contents-wrap {
     margin-top: 18px;
     .text { margin-top: 8px; }
-    .date { margin-top: 9px; }
+    .date {
+      margin-top: 9px;
+      color: $c_default_lighter;
+    }
   }
 }
 .newsletter-block {
@@ -759,6 +762,16 @@ input[type="radio"]:checked ~ .label-radio:before {
     margin-bottom: 60px;
     &:last-child { margin-bottom: 0; }
   }  
+}
+
+@media(min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg) - 1) {
+
+  .contacts-block {
+    .img-wrap {
+      &:before { content: none !important; }
+    }
+  }
+
 }
 
 // Contact form and map

@@ -60,6 +60,12 @@
     flex-wrap: wrap;
   }
 }
+@media(min-width: map-get($breakpoints, lg)) {
+  .flex-y-c-lg-up {
+    display: flex;
+    align-items: center;
+  }
+}
 @media(max-width: map-get($breakpoints, lg) - 1) {
   .flex-x-c-md-down {
     display: flex;

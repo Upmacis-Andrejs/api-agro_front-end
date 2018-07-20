@@ -32,6 +32,11 @@
 		opacity: 0;
 	}
 }
+.header-menu,
+.lang-switcher {
+	li a:hover { color: $c_white; }
+}
+.lang-switcher li a.active { font-weight: 700 !important; }
 .not--top {
 	.site-header {
 		padding-top: 0;
@@ -44,6 +49,7 @@
 @media( min-width: $breakpoint_lg + 1 ) {
 	.not--top {
 		.site-header {
+			.header-menu-wrap { justify-content: flex-start !important; }
 			.header-1st-row {
 				padding: 0;
 				line-height: 0;

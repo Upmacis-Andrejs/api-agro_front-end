@@ -376,7 +376,7 @@ $(document).ready(function() {
     matchHeights();
   });
 
-  // Position newsletter block
+  // Position newsletter block and contents
   function positionNewsletter() {
     if( $('.newsletter-block').length > 0 ) {
       var $newsletterBlock = $('.newsletter-block');
@@ -384,6 +384,21 @@ $(document).ready(function() {
       var $space = parseInt($newsletterHeight / 2);
       $newsletterBlock.css('margin-bottom', -$space);
       $('.contacts').css('padding-top', $space);
+
+      var $upperWrap = $newsletterBlock.find('.upper-wrap');
+      var $blockTitle = $upperWrap.find('.block-title');
+      var $contentsWrap = $upperWrap.find('.contents-wrap');
+
+      if( $(window).outerWidth() >= 1200 ) {
+      	var $blockWidth = $upperWrap.width();
+      	$blockTitle.css('width', '');
+      	var $blockTitleWidth = $blockTitle.outerWidth();
+		$blockTitle.css('width', $blockTitleWidth);
+      	$contentsWrap.css('width', parseInt($blockWidth - $blockTitleWidth));
+      } else {
+      	$blockTitle.css('width', '');
+      	$contentsWrap.css('width', '');
+      }
     }
   }
   positionNewsletter();
