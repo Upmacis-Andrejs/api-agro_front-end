@@ -133,7 +133,7 @@
 							<div class="col col-12">
 								<div class="design-img-wrap">
 									<div class="img-wrap">
-										<img src="${require(`./img/garlic-2.png`)}">
+										<img class="block-c" src="${require(`./img/garlic-2.png`)}">
 									</div>
 								</div>
 								<h2 class="title h1 inline-x-c c-on-dark m-b-section-title">Jaunumi</h2>
@@ -204,8 +204,11 @@
 											<fieldset class="email-master-fieldset col-md-down-12">
 												<label class="fieldset-title h3">E-pasta adrese:</label>
 												<div class="lower-wrap col-12 flex">
-													<div class="input-wrap flex">
-														<input class="input border" type="email" required>
+													<div class="input-wrap">
+														<input class="input border error" type="email" required>
+														<p class="error-text">Vienalga kāds error paziņojums!</p>
+													</div>
+													<div class="btn-wrap">
 														<button class="btn btn-1 min-w-190" type="submit">Pierakstīties</button>
 													</div>
 												</div>
@@ -285,7 +288,8 @@
 										<form>
 											<h3 class="title h2 block">Sazinies ar mums</h3>
 											<input class="input block" type="text" placeholder="Vārds" required>
-											<input class="input block" type="email" placeholder="E-pasts" required>
+											<input class="input block error" type="email" placeholder="E-pasts" required>
+											<p class="error-text">Vienalga kāds error paziņojums!</p>
 											<textarea class="textarea block" placeholder="Jautājums" required></textarea>
 											<button class="btn btn-1 min-w-148" type="submit">Aizsūtīt</button>
 										</form>
@@ -293,7 +297,7 @@
 									<div id="decor-triangle"></div>
 								</div>
 								<div id="map" class="js-row-full-w">
-									<div class="marker" data-lat="56.967012" data-lng="24.141053"></div>
+									<div class="marker" data-lat="56.966026" data-lng="24.141861"></div>
 								</div>
 							</div>
 						</div>

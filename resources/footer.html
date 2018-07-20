@@ -43,7 +43,7 @@
                     
                     // vars
                     var args = {
-                      zoom    : 16,
+                      zoom    : 18,
                       center    : new google.maps.LatLng(0, 0),
                       mapTypeId : google.maps.MapTypeId.ROADMAP,
                       disableDefaultUI: true,
@@ -113,12 +113,12 @@
                       var $pan_height = parseInt($map_dom_height * 0.15846);
 
                       if( $windowWidth >= 1200 ) {
-                          map.setZoom( 16 );
+                          map.setZoom( 18 );
                           var $pan_distance = 205;
                           // change the center of map
                           map.panBy(-$pan_distance, $pan_height);
                       } else {
-                          map.setZoom( 16 );
+                          map.setZoom( 17 );
                           var $pan_distance = parseInt($windowWidth * 0.45);
                           // change the center of map
                           map.panBy($pan_distance, $pan_height);
