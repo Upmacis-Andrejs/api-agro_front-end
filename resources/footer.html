@@ -194,16 +194,20 @@
                   var map = null;
 
                   function initMap() {
-                    // create map
+                    // create map if #map exists
+                    if( $('#map').length > 0 ) {
+                      
                       map = new_map( $('#map') );
 
-                    google.maps.event.addDomListener(window, 'resize', function() {
-                        center_map( map );
-                    });
+                      google.maps.event.addDomListener(window, 'resize', function() {
+                          center_map( map );
+                      });
+
+                    }
                   }
 
                 /* -------------------------------------------------------------------------------------- */
                   // /Google Maps API script              
             </script>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv5KIF7Vh8BAiq15XaslQEMaL-VzYQcKY&callback=initMap"></script>    
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv5KIF7Vh8BAiq15XaslQEMaL-VzYQcKY&callback=initMap"></script>
 </html>

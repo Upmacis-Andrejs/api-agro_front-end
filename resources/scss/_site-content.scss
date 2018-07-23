@@ -5,8 +5,31 @@
 }
 
   // Compensate for header height
+.section-1 {
+  padding-top: calc(225px + 68px);
+}
+
 @media( max-width: $breakpoint_lg ) {
-  .section-1 { padding-top: 157px; }
+  .section-1 {
+    padding-top: 100px;
+  }
+}
+
+  // Additional CSS for News Single page
+.news-single .site-content { padding-bottom: 74px; }
+
+@media( max-width: $breakpoint_lg ) {
+  .news-single {
+    .site-header { padding-top: 5px; }
+    .site-content { padding-bottom: 68px; }
+    .news-single-item { padding-top: calc(125px + 50px); }
+  }
+}
+
+@media( max-width: $breakpoint_sm ) {
+  .news-single {
+    .news-single-item { padding-top: calc(100px + 50px); }
+  }
 }
 
   // Button
@@ -34,9 +57,12 @@
 
   // Margins
 .m-b-section-title { margin-bottom: 58px; }
+.m-t-btn-wrap { margin-top: 35px; }
 
   // Clip path
-.clip-path { clip-path: polygon(0% 100%, 22.506% 0, 100% 0%, 77.494% 100%); }
+.clip-path {
+  clip-path: polygon(0% 100%, 22.506% 0, 100% 0%, 77.494% 100%);
+}
 
   // Input styles
 .input {
@@ -622,7 +648,16 @@ input[type="radio"]:checked ~ .label-radio:before {
 }
 
 .news-block {
-  .img { padding-top: 100% }
+  &:hover {
+    cursor: pointer !important;
+    .img { transform: scale(1.1); }
+  }
+  .img-wrap { overflow: hidden; }
+  .img {
+    padding-top: 100%;
+    transform-origin: 50% 50%;
+    transition: transform .2s ease-in-out;
+  }
   .contents-wrap {
     margin-top: 18px;
     .text { margin-top: 8px; }
@@ -946,11 +981,5 @@ input[type="radio"]:checked ~ .label-radio:before {
       height: auto;
       background-color: $c_accent_lighter;
     }
-  }
-}
-
-@media( max-width: $breakpoint_md ) {
-  .contact-wrap {
-    padding-top: 68px;
   }
 }

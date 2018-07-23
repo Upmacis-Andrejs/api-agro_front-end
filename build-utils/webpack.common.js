@@ -43,8 +43,8 @@ const config = {
       template: 'resources/index.html'
     }),
     new HtmlWebpackPlugin({
-      filename: '404.html',
-      template: 'resources/404.html'
+      filename: 'news.html',
+      template: 'resources/news.html'
     }),
     new MiniCssExtractPlugin({
       filename: "./css/style.css"
