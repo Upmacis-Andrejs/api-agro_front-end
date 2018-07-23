@@ -34,7 +34,7 @@
 }
 .header-menu,
 .lang-switcher {
-	li a:hover { color: $c_white; }
+	li a:hover { text-decoration: underline; }
 }
 .lang-switcher li a.active { font-weight: 700 !important; }
 .not--top {
